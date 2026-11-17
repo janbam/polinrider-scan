@@ -1,0 +1,48 @@
+# Curated snapshots, not an exhaustive registry blocklist. Update using AGENTS.md.
+reviewed = 2026-11-17
+
+# OpenSourceMalware's April families and October responder signatures, plus
+# the resolver wallets and npm persistence markers from the September/November waves.
+content_literals = [
+  'rmcej%otb%', 'Cot%3t=shtP', "atob('dmFyIF8kX", '_$jsoIter',
+  'e9b53a7c-2342-4b15-b02d-bd8b8f6a03f9',
+  'TMfKQEd7TJJa5xNZJZ2Lep838vrzrs7mAP', 'TXfxHUet9pJVU1BgVkBAbrES4YUc1nGzcG',
+  'be037400670fbf1c32364f762975908dc43eeb38759263e7dfcdabc76380811e',
+  '3f0e5781d0855fb460661ac63257376db1941b2bb522499e4757ecb3ebd5dce3',
+  '260120.vercel.app', 'default-configuration.vercel.app', 'vscode-settings-bootstrap.vercel.app',
+  'vscode-settings-config.vercel.app', 'vscode-bootstrapper.vercel.app', 'vscode-load-config.vercel.app',
+  '596dcc9fda875309ff85eba09cf5a97d', '33ff3edaf55a8e03dcbc7cb40d498a49',
+  'a322e5f3d311d3080e6f0121063e9adc2490ef1a', '1eef0849eda15d87f64e51c73c8442cf3c8bcef3',
+  'q4FZkxX{!h,Sr3=@', '/*NPM_WS_SHIM*/', 'A10-npm_inject',
+]
+content_patterns = [
+  '''global\.o\s*=\s*['"][0-9]+-[0-9]+-du['"]''',
+  '''node +[^ "']*fa-solid-[0-9]{3}\.woff2''',
+]
+
+# Names alone cannot establish that any affected release was installed or run.
+package_names = [
+  'tailwindcss-style-animate', 'tailwind-mainanimation', 'tailwind-autoanimation',
+  'tailwindcss-typography-style', 'tailwindcss-style-modify', 'tailwind-animationbased',
+  'tailwindcss-animate-style', 'itsa-react-docviewer', 'visanduma/nova-two-factor',
+  'visanduma/laravel-hrm', 'visanduma/laravel-invoice', 'plusinfolab/logstation',
+  'sevenspan/laravel-chat', 'sevenspan/code-generator', 'sevenspan/laravel-whatsapp', 'adxio/twig-hmvc',
+  'github.com/xpos587/git2md', 'github.com/xpos587/markfetch',
+  '@adminide-stack/client-redux', '@adminide-stack/health-api-server', '@adminide-stack/user-activity-browser',
+  '@adminide-stack/utils', '@adminide-stack/forms-core', '@adminide-stack/yantra-help-browser',
+  'server-hemera-mongo', 'cdeops', '@cdmbase/wiki-browser', '@pubngo-stack/help-browser',
+  'react-contact-forms', 'tailwindcss-form-utils', 'tailwind-contact-forms', 'tailwindcss-contact-form',
+  'tailwind-form-core', 'tailwind-input-kit', 'tailwind-forms-kit',
+]
+
+# Responder-documented loader drop locations, relative to the checked account home.
+persistence_paths = [
+  '.node_modules/.npm-ws-runner.js', '.node_modules/.npm-ws.json',
+  '.node_modules/.npm-ws.pid', '.node_modules/.npm-ws.log',
+]
+
+# Exact peer IPv4 addresses from the October responder, Socket and OX disclosures.
+network_ips = [
+  '193.32.162.52', '95.135.181.151', '193.247.144.38', '166.88.73.46',
+  '166.88.134.62', '23.27.13.135', '103.179.143.219', '166.88.134.75', '23.27.13.72',
+]
